@@ -1,24 +1,24 @@
 header{
   background-color: gray;
-  max-width: 100%;
+  max-width: 100%; /*ändras när man ändra storleken på fönstret*/
   height: 160px
 }
 
 body{
-  background-color: gainsboro;
+  background-color: gainsboro; /*grå*/
 }
 
 footer{
   background-color: gray;
-  width: 100%;
+  max-width: 100%;
   height: 90px;
   position: relative;
-  bottom: 0;
+  bottom: 0; /*så den är längst ner på sidan även om man lägger in mer saker*/
 }
+
 footer > p{
   font-family: 'Ranchers';
   font-size: 15px;
-  position: relative;
   text-align: right;
 }
 
@@ -29,26 +29,31 @@ footer > p{
   text-shadow: 5px 5px lightgray;
 }
 
+.i{
+  width: 80px;
+  vertical-align: middle; /*bilderna i rubriken skulle vara brevis texten men i mitten*/
+}
+
 #bilder{
-  text-align: center;
+  text-align: center; /*när man gör sidan mindre hamnar bilderna under men i mitten*/
   border-style: dotted;
   border-width: thick;
   margin-top: 25px;
   margin-bottom: 20px;
 }
 
+#text{
+  column-count: 4;
+  column-gap: 40px;
+  column-rule: 8px double purple;
+  font-size: 20px;
+}
+
 .first {
   width: 300px;
   border-radius: 40px;
   padding: 20px;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.i{
-  width: 80px;
-  vertical-align: middle;
+  display: inline-block; /*bilderna är blocken och jag ville ha de brevid varandra*/
 }
 
 h1{
@@ -59,9 +64,9 @@ h1{
 
 #underRubrik{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: row; /*jag ville ha namnen brevid varandra i en rad*/
+  flex-wrap: wrap; /*om man justerar storleken på fönstret kan hela flex-boxen anpassa sig om den behöver*/
+  justify-content: space-around; /*gör mellanrum mellan föremålen men också mellan föremålen och kanten*/
   text-shadow: 5px 5px gray;
 }
 
@@ -72,9 +77,9 @@ h1{
 
 #list{
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-direction: row; /*jag ville ha listorna brevid varandra i en rad*/
+	flex-wrap: wrap; /*om man justerar storleken på fönstret kan hela flex-boxen anpassa sig om den behöver*/
+	justify-content: space-around; /*gör mellanrum mellan föremålen men också mellan föremålen och kanten*/
 }
 
 #list > div{
@@ -82,13 +87,21 @@ h1{
   font-size: 25px;
   }
 
-#wiki-link{
-background-color: gray;
-border-radius: 20px;
-padding: 15px;
-font-family: arial, cursive;
-font-size: 15px;
-color: white;
-position: relative;
-left: 44%;
+  #wiki-link{
+  background-color: gray;
+  border-radius: 20px; /*rundar kanterna*/
+  padding: 15px;
+  font-family: arial, cursive;
+  font-size: 15px;
+  position: relative; /*för jag vill ha den i mitten*/
+  left: 44%;
+  text-decoration: none; /*inget understreck*/
+  }
+
+a:visited { /*vanliga fall*/
+  color: white;
+}
+
+a:hover { /*håller musen över*/
+  color: hotpink;
 }
