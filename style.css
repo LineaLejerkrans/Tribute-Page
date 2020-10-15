@@ -1,7 +1,7 @@
 header{
   background-color: gray;
   max-width: 100%; /*ändras när man ändra storleken på fönstret*/
-  height: 160px
+  height: 220px
 }
 
 body{
@@ -153,15 +153,19 @@ a:hover { /*håller musen över*/
 }
 
 #test > img {
+  position : absolute;
   height: 100px;
-  position: absolute;
-  animation: testFunction 15s linear 1s infinite alternate;
+  bottom: 0px;
+  left: 0px;
+  animation: run 20s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
-@keyframes testFunction {
-  0%   {left:2%; transform: rotateY(0deg);top:500px; top:0;}
-  25%  {left:94%; top:0;}
-  50%  {left:94%; top:500px;}
-  75%  {left:2%; transform: rotateY(180deg);top:500px;}
-  100% {left:2%; top:0;}
+@keyframes run {
+  0%   {left:0px; top: 120px; transform: rotateY(180deg);}
+  50% {left:90%; top:120px;  transform: rotateY(0deg);}
+  100% {left:0px; top:120px; transform: rotateY(180deg);}
+
+
 }
