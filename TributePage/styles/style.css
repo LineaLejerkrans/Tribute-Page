@@ -94,7 +94,6 @@ h1{
   }
 
 #gif{
-  text-align: center;
   display: flex;
   flex-wrap: nowrap; /*när man gör sidan mindre vill jag inte att de ska hamna under*/
   justify-content: space-around;
@@ -102,7 +101,7 @@ h1{
 
 .movingcat{
   height: 350px;
-  display: inline-block;
+  display: inline-block; /*jag vill ha de brevis varndra men jag vill också få ändra höjden, vilket man inte får med bara inline*/
 }
 
 #wiki-link{
@@ -117,22 +116,14 @@ h1{
   }
 
 #gif2{
-  text-align: center;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  display: flex; /* gör hela diven till en flexbox*/
+  flex-wrap: nowrap; /* om jag gör sidan mindre så vill jag inte att bilderna ska hamna under varndra utan de försvinner om de inte för plats*/
+  justify-content: space-around; /*jag ville ha bilderna i mitten men lika muycket från kanten som från varandra*/
 }
 
 #gif2 > img{
   height: 300px;
   margin: 50px;
-}
-
-#door{
-  text-align: center;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
 }
 
 a:visited { /*vanliga fall*/
@@ -144,27 +135,32 @@ a:hover { /*håller musen över*/
 }
 
 #runningCat > img {
-  position : absolute;
-  height: 100px;
-  bottom: 0px;
-  left: 0px;
-  animation: run 20s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
+  position : absolute; /*eftersom jag inte vill att den ska påverka andra objekt*/
+  height: 100px; /*hur stor bilden är*/
+  animation: run 20s; /*animationen "run" ska köras i 20 sekunder*/
+	animation-iteration-count: infinite; /*den ska upprepas hela tiden så den slutar inte*/
+	animation-direction: alternate; /*om den inte ska gå framåt eller bakåt använder man alternativ*/
 }
 
 @keyframes run {
-  0%   {left:0px; top: 120px; transform: rotateY(180deg);}
-  50% {left:90%; top:120px;  transform: rotateY(0deg);}
-  100% {left:0px; top:120px; transform: rotateY(180deg);}
+  0%   {left:0px; top: 120px; transform: rotateY(180deg);} /*i början ska den rotera ett halvt varv*/
+  50% {left:90%; top:120px;  transform: rotateY(0deg);} /*efter halva ska den var 90% av skärmen till vänster*/
+  100% {left:0px; top:120px; transform: rotateY(180deg);} /*sen ska den rotera ett halvt varv till när den är påväg tillbaka*/
+}
+
+#info{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 150px;
 }
 
 @keyframes names{
-  0% { content : "Cornish Rex" }
-  10% { content: "Main Coon" }
+  0% { content : "Maine Coon" } /*texten ändras till det som skrivs i grönt*/
+  10% { content: "Cornish Rex" }
   20% { content : "Sphynx" }
   30% { content : "Birman" }
-  40% { content : "Maine Coon" }
+  40% { content : "Ragdoll" }
   50% { content : "Siamese" }
   60% { content : "Abyssinian" }
   70% { content : "Devon Rex" }
@@ -173,41 +169,34 @@ a:hover { /*håller musen över*/
   100% { content : "Oriental" }
 }
 
-.change-text {
-  animation : names 20s infinite;
-  content: ""; // Added
+.change-text::after {
+  animation : names 40s infinite; /*animationen kommer köras i 40 sekunder föralltid*/
+  content: ""; /*den ska skriva ut det som står innom citationstecknen*/
   text-align: center;
+  font-size: 60px;
   font-family: 'Ranchers';
-  font-size: 50px;
   margin-top: 200px;
-  margin-left: 200px;
-  margin-right: 200px;
-  background-size: 200px 200px;
-  width: 200px;
-  height: 200px;
+  color: darkblue;
 }
 
-#test {
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
+#change-image   {
+    height: 400px;
+    border-radius: 25px; /*rundar kanterna*/
+    border: thick dotted;
     position: relative;
-
-    animation: mymove 20s infinite;
-    background-size: 200px 200px;
-    background-repeat: no-repeat;
+    animation: image 40s infinite;
 }
 
-@keyframes mymove {
-  0% { content : url(../bilder/door.jpg) }
-  10% { content : url(../bilder/pulzen.jpg) }
-  20% { content : url(../bilder/pulzen0.JPG) }
-  30% { content : url(../bilder/pippin.JPG) }
-  40% { content : url(../bilder/door.jpg) }
-  50% { content : url(../bilder/pulzen.jpg) }
-  60% { content : url(../bilder/pippin.JPG) }
-  70% { content : url(../bilder/door.jpg) }
-  80% { content : url(../bilder/pulzen.jpg) }
-  90% { content : url(../bilder/door.jpg) }
-  100% { content : url(../bilder/pippin.JPG) }
+@keyframes image {
+  0% { content : url(../bilder/mainecoon.jpg) } /*den kommer byta mellan dessa bilder*/
+  10% { content : url(../bilder/cornish.jpg) }
+  20% { content : url(../bilder/sphynx.jpg) }
+  30% { content : url(../bilder/birman.jpg) }
+  40% { content : url(../bilder/ragdoll.jpg) }
+  50% { content : url(../bilder/siamese.jpg) }
+  60% { content : url(../bilder/abyssinian.jpg) }
+  70% { content : url(../bilder/devon.jpg) }
+  80% { content : url(../bilder/bengal.jpg) }
+  90% { content : url(../bilder/ocicat.jpg) }
+  100% { content : url(../bilder/oriental.jpg) }
 }
