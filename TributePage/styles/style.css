@@ -1,0 +1,213 @@
+header{
+  background-color: gray;
+  max-width: 100%; /*ändras när man ändra storleken på fönstret*/
+  height: 220px
+}
+
+body{
+  background-color: gainsboro; /*grå*/
+  margin: 0; /*footer och header hela vägen ut i kanterna*/
+  padding: 0;
+}
+
+footer{
+  background-color: gray;
+  max-width: 100%;
+  height: 90px;
+  bottom: 0;
+  left:40% /*så den är längst ner på sidan även om man lägger in mer saker*/
+}
+
+footer > p{
+  font-family: 'Ranchers';
+  font-size: 15px;
+  text-align: right;
+}
+
+#rubrik{
+  font-family: 'Ranchers';
+  font-size: 110px;
+  text-align: center;
+  text-shadow: 5px 5px lightgray;
+}
+
+.i{
+  width: 80px;
+  vertical-align: middle; /*bilderna i rubriken skulle vara brevis texten men i mitten*/
+}
+
+#bilder{
+  text-align: center; /*när man gör sidan mindre hamnar bilderna under men i mitten*/
+  border-style: dotted;
+  border-width: thick;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+#total{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text {
+  width: 400px;
+  text-align: center;
+  margin: 20px;
+}
+
+.first {
+  width: 300px;
+  border-radius: 40px;
+  padding: 20px;
+  display: inline-block; /*bilderna är blocken och jag ville ha de brevid varandra*/
+}
+
+h1{
+  font-family: 'Ranchers';
+  font-size: 45px;
+  text-align: center;
+}
+
+#underRubrik{
+  display: flex;
+  flex-direction: row; /*jag ville ha namnen brevid varandra i en rad*/
+  flex-wrap: wrap; /*om man justerar storleken på fönstret kan hela flex-boxen anpassa sig om den behöver*/
+  justify-content: space-around; /*gör mellanrum mellan föremålen men också mellan föremålen och kanten*/
+  text-shadow: 5px 5px gray;
+}
+
+#underRubrik > h1{
+  font-size: 50px;
+  text-align: center;
+}
+
+#list{
+	display: flex;
+	flex-direction: row; /*jag ville ha listorna brevid varandra i en rad*/
+	flex-wrap: wrap; /*om man justerar storleken på fönstret kan hela flex-boxen anpassa sig om den behöver*/
+	justify-content: space-around; /*gör mellanrum mellan föremålen men också mellan föremålen och kanten*/
+}
+
+#list > div{
+  font-family: 'Ranchers', cursive;
+  font-size: 25px;
+  }
+
+#gif{
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap; /*när man gör sidan mindre vill jag inte att de ska hamna under*/
+  justify-content: space-around;
+}
+
+.movingcat{
+  height: 350px;
+  display: inline-block;
+}
+
+#wiki-link{
+  background-color: gray;
+  border-radius: 20px; /*rundar kanterna*/
+  padding: 15px;
+  font-family: arial, cursive;
+  font-size: 15px;
+  position: relative; /*för jag vill ha den i mitten*/
+  left: 44%;
+  text-decoration: none; /*inget understreck*/
+  }
+
+#gif2{
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+#gif2 > img{
+  height: 300px;
+  margin: 50px;
+}
+
+#door{
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+a:visited { /*vanliga fall*/
+  color: white;
+}
+
+a:hover { /*håller musen över*/
+  color: hotpink;
+}
+
+#runningCat > img {
+  position : absolute;
+  height: 100px;
+  bottom: 0px;
+  left: 0px;
+  animation: run 20s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes run {
+  0%   {left:0px; top: 120px; transform: rotateY(180deg);}
+  50% {left:90%; top:120px;  transform: rotateY(0deg);}
+  100% {left:0px; top:120px; transform: rotateY(180deg);}
+}
+
+@keyframes names{
+  0% { content : "Cornish Rex" }
+  10% { content: "Main Coon" }
+  20% { content : "Sphynx" }
+  30% { content : "Birman" }
+  40% { content : "Maine Coon" }
+  50% { content : "Siamese" }
+  60% { content : "Abyssinian" }
+  70% { content : "Devon Rex" }
+  80% { content : "Bengal" }
+  90% { content : "Ocicat" }
+  100% { content : "Oriental" }
+}
+
+.change-text {
+  animation : names 20s infinite;
+  content: ""; // Added
+  text-align: center;
+  font-family: 'Ranchers';
+  font-size: 50px;
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-size: 200px 200px;
+  width: 200px;
+  height: 200px;
+}
+
+#test {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+
+    animation: mymove 20s infinite;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+}
+
+@keyframes mymove {
+  0% { content : url(../bilder/door.jpg) }
+  10% { content : url(../bilder/pulzen.jpg) }
+  20% { content : url(../bilder/pulzen0.JPG) }
+  30% { content : url(../bilder/pippin.JPG) }
+  40% { content : url(../bilder/door.jpg) }
+  50% { content : url(../bilder/pulzen.jpg) }
+  60% { content : url(../bilder/pippin.JPG) }
+  70% { content : url(../bilder/door.jpg) }
+  80% { content : url(../bilder/pulzen.jpg) }
+  90% { content : url(../bilder/door.jpg) }
+  100% { content : url(../bilder/pippin.JPG) }
+}
