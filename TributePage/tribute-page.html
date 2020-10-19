@@ -2,12 +2,14 @@
   <head>
     <title>My Cats</title>
     <meta charset="UTF-8"> <!--alla tecken-->
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- gör att webbsidan ändra sig när om man skulle gå in på till exempel en mobil-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- gör att webbsidan ändra sig vid olika stora skärmar-->
     <link rel="stylesheet" href="styles/style.css"> <!--länka css-filen-->
     <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet"> <!--länka en font-->
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> <!--länka en font-->
     <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet"> <!--länka en font-->
-    <link rel="icon" href="cat.gif" type="image/gif">
+    
+    <!--jag försökte få en ikon uppe i browser taben men jag får det inte att fungera-->
+    <link rel="icon" type="image/png" href="bilder/emoji.png">
 
   </head>
   <body>
@@ -23,6 +25,7 @@
 
           <div>
             <ul>
+              <li>Born 2009</li>
               <li>27 April</li>
               <li>11 Years</li> <!--lista på vänstra sidan-->
               <li>Orange</li>
@@ -31,6 +34,7 @@
 
           <div>
             <ul>
+              <li>Born 2018</li>
               <li>3 May</li>
               <li>2 Years</li> <!--lista på högra sidan-->
               <li>Gray-White</li>
@@ -42,22 +46,22 @@
         <a id="wiki-link" href="https://sv.wikipedia.org/wiki/Cornish_rex" target="_blank">Cornish Rex Wikipedia</a>
 
         <div id="gif">
-          <img class="movingcat" src="bilder/sleep.gif" name="sleeping cat">
-          <img class="movingcat" src="bilder/sleep.gif" name="sleeping cat">
-          <img class="movingcat" src="bilder/sleep.gif" name="sleeping cat">
-          <img class="movingcat" src="bilder/sleep.gif" name="sleeping cat">
-          <img class="movingcat" src="bilder/sleep.gif" name="sleeping cat">
+          <img  src="bilder/sleep.gif" name="sleeping cat">
+          <img  src="bilder/sleep.gif" name="sleeping cat">
+          <img src="bilder/sleep.gif" name="sleeping cat">
+          <img src="bilder/sleep.gif" name="sleeping cat">
+          <img src="bilder/sleep.gif" name="sleeping cat">
         </div>
 
       <div id="bilder">
-        <img class="first" src="bilder/IMG_9514.JPG" alt="båda ute">
-        <img class="first" src="bilder/pulzen.jpg" alt="pulzen">
-        <img class="first" src="bilder/pippin.JPG" alt="pippin">
-        <img class="first" src="bilder/IMG_8651.jpg" alt="båda">
-        <img class="first" src="bilder/IMG_8539.jpg" alt="pulzen fönster">
+        <img class="foto" src="bilder/IMG_9514.JPG" alt="båda ute">
+        <img class="foto" src="bilder/pulzen.jpg" alt="pulzen">
+        <img class="foto" src="bilder/pippin.JPG" alt="pippin">
+        <img class="foto" src="bilder/IMG_8651.jpg" alt="båda">
+        <img class="foto" src="bilder/IMG_8539.jpg" alt="pulzen fönster">
       </div>
 
-        <div id="total">
+        <div class="total">
           <div class="text">
             <p>
               <b>Relationship with Humans</b><br>
@@ -116,12 +120,12 @@
           </div>
       </div>
 
-      <div id="gif2">
+    <div id="gif2">
       <img src="bilder/cat.gif" name="moving cat">
       <img src="bilder/cat.gif" name="moving cat">
      </div>
 
-     <div id="total">
+     <div class="total">
        <div class="text">
          <p>
            <b>Relationship with Humans</b><br>
@@ -180,12 +184,105 @@
        </div>
      </div>
 
-     <!--roterande bilder med deras namn brevid de-->
+     <!--varierande bilder med deras namn brevid de-->
      <div id="info">
        <div class="change-text"> </div>
        <div id="change-image"></div>
        <div class="change-text"> </div>
      </div>
+
+     <div>
+       <p id="rubrikGallery">--------------------------- Gallery ---------------------------</p>
+     </div>
+
+     <!--alla bilder till bildgalleriet-->
+     <div id="bildRad1">
+     <div class="gallery">
+      <a target="_blank" href="bilder/door.jpg">
+        <img src="bilder/door.jpg">
+      </a>
+      <div class="desc">Pulzen trying to climb the screen door</div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="bilder/disk.JPEG">
+        <img src="bilder/disk.JPEG">
+      </a>
+      <div class="desc">Pippin and Pulzen sitting on the sink</div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="bilder/liten.jpg">
+        <img src="bilder/liten.jpg">
+      </a>
+      <div class="desc">Pulzen with his brother Inferno</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="bilder/hus.jpg">
+        <img src="bilder/hus.jpg" alt="" >
+      </a>
+      <div class="desc">Pulzen in the sun</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="bilder/jacka.jpg">
+        <img src="bilder/jacka.jpg">
+      </a>
+      <div class="desc">Pulzen in his winter coat</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="bilder/katthem.JPG">
+        <img src="bilder/katthem.JPG" >
+      </a>
+      <div class="desc">Pulzen looknig around the corner</div>
+    </div>
+  </div>
+
+    <div id="bildRad2">
+    <div class="gallery">
+      <a target="_blank" href="bilder/låda.jpg">
+        <img src="bilder/låda.jpg">
+      </a>
+      <div class="desc">Pippin and Pulzen in their basket</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="bilder/mittens.jpg">
+        <img src="bilder/mittens.jpg">
+      </a>
+      <div class="desc">Pulzen with his best friend Mittens</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="bilder/sola.jpg">
+        <img src="bilder/sola.jpg">
+      </a>
+      <div class="desc">Pippin resting on the porch</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="bilder/säng.jpg">
+        <img src="bilder/säng.jpg">
+      </a>
+      <div class="desc">Pippin and Pulzen resting on the bed</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="bilder/träd.jpg">
+        <img src="bilder/träd.jpg">
+      </a>
+      <div class="desc">Pulzen sitting in a tree</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="bilder/ute.JPG">
+        <img src="bilder/ute.JPG">
+      </a>
+      <div class="desc">Pippin sitting on the porch</div>
+    </div>
+    </div>
 
      <!--en gif som kommer finnas i rubriken-->
      <div id="runningCat">
